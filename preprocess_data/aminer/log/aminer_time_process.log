@@ -1,0 +1,42 @@
+global ts range: 0.0 252374400.0
+Saved: ../../processed_data/aminer/pp_aminer_half_year_train_dt_N200.npy | shape=(1636642, 10) dtype=float32 pad(max_span)=252374400.0
+Saved: ../../processed_data/aminer/pp_aminer_half_year_val_dt_N200.npy | shape=(163973, 10) dtype=float32 pad(max_span)=252374400.0
+Saved: ../../processed_data/aminer/pp_aminer_half_year_test_dt_N200.npy | shape=(303476, 10) dtype=float32 pad(max_span)=252374400.0
+
+================ Final Verification ================
+
+[train]
+  total rows                 : 1636642
+  label!=0 rows              : 61833
+  valid rows (!all -1)       : 61833
+  rows with >=1 real delta   : 60662
+  rows label!=0 but no history: 1171
+  avg oldest delta (per-row max real delta): 32710466.0
+  max oldest delta (across rows)          : 203817600.0
+  avg newest delta (per-row min real delta): 3880459.75
+
+[val]
+  total rows                 : 163973
+  label!=0 rows              : 5206
+  valid rows (!all -1)       : 5206
+  rows with >=1 real delta   : 5206
+  rows label!=0 but no history: 0
+  avg oldest delta (per-row max real delta): 42862564.0
+  max oldest delta (across rows)          : 219801600.0
+  avg newest delta (per-row min real delta): 3793534.0
+
+[test]
+  total rows                 : 303476
+  label!=0 rows              : 5239
+  valid rows (!all -1)       : 5239
+  rows with >=1 real delta   : 5239
+  rows label!=0 but no history: 0
+  avg oldest delta (per-row max real delta): 45521568.0
+  max oldest delta (across rows)          : 235267200.0
+  avg newest delta (per-row min real delta): 4598990.0
+
+[Summary: avg oldest delta (= earliest interaction gap)]
+  train: rows_with_history=60662, avg_oldest_delta=32710466.0
+  val  : rows_with_history=5206,   avg_oldest_delta=42862564.0
+  test : rows_with_history=5239,  avg_oldest_delta=45521568.0
+All final checks passed ✅
