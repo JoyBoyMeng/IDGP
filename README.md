@@ -25,8 +25,19 @@ preprocess the dataset step by step before training.
 
 To train the IDGP model:
 
-``` bash
-python train_popularity_prediction.py     --dataset_name aminer     --model_name Fluxion     --num_runs 3     --patience 20     --batch_size 200     --learning_rate 0.0001     --gpu 0     --fluxion_member_num 64     --ema 0.5     --num_epochs 30     --exp 001
+```bash
+python train_popularity_prediction.py \
+    --dataset_name aminer \
+    --model_name Fluxion \
+    --num_runs 3 \
+    --patience 20 \
+    --batch_size 200 \
+    --learning_rate 0.0001 \
+    --gpu 0 \
+    --fluxion_member_num 64 \
+    --ema 0.5 \
+    --num_epochs 30 \
+    --exp 001
 ```
 
 ------------------------------------------------------------------------
@@ -35,8 +46,16 @@ python train_popularity_prediction.py     --dataset_name aminer     --model_name
 
 To evaluate the trained model:
 
-``` bash
-nohup python -u evaluate_popularity_prediction.py     --dataset_name aminer     --model_name Fluxion     --num_runs 1     --batch_size 200     --gpu 0     --fluxion_member_num 64     --ema 0.5     --exp 001
+```bash
+python evaluate_popularity_prediction.py \
+    --dataset_name aminer \
+    --model_name Fluxion \
+    --num_runs 1 \
+    --batch_size 200 \
+    --gpu 0 \
+    --fluxion_member_num 64 \
+    --ema 0.5 \
+    --exp 001
 ```
 
 ------------------------------------------------------------------------
