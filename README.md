@@ -1,7 +1,7 @@
 # IDGP: Influence-Aware Dynamic Graph Learning for Popularity Prediction
 
 This repository contains the official implementation of **IDGP**, an
-influence-aware dynamic graph framework for cascade popularity
+influence-aware dynamic graph framework for popularity
 prediction.
 
 IDGP models long-range temporal influence by dynamically routing node
