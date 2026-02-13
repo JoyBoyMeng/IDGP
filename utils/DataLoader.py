@@ -147,51 +147,6 @@ def get_popularity_prediction_data(dataset_name: str, val_ratio: float, test_rat
         edge_raw_features = np.zeros((edge_ids_num, EDGE_FEAT_DIM))
 
         return node_raw_features, edge_raw_features, full_data, train_data, val_data, test_data
-
-    # elif dataset_name == 'aps':
-    #     train_data = pd.read_csv('./processed_data/{}/pp_{}_year_train.csv'.format(dataset_name, dataset_name))
-    #     val_data = pd.read_csv('./processed_data/{}/pp_{}_year_val.csv'.format(dataset_name, dataset_name))
-    #     test_data = pd.read_csv('./processed_data/{}/pp_{}_year_test.csv'.format(dataset_name, dataset_name))
-    #     all_data = pd.concat([train_data, val_data, test_data])
-    #     train_data = train_data.to_numpy()
-    #     val_data = val_data.to_numpy()
-    #     test_data = test_data.to_numpy()
-    #     all_data = all_data.to_numpy()
-    #
-    #     full_slow_feature = np.load(
-    #         './processed_data/{}/pp_{}_year_all_feature.npy'.format(dataset_name, dataset_name))
-    #     train_slow_feature = np.load(
-    #         './processed_data/{}/pp_{}_year_train_feature.npy'.format(dataset_name, dataset_name))
-    #     val_slow_feature = np.load(
-    #         './processed_data/{}/pp_{}_year_val_feature.npy'.format(dataset_name, dataset_name))
-    #     test_slow_feature = np.load(
-    #         './processed_data/{}/pp_{}_year_test_feature.npy'.format(dataset_name, dataset_name))
-    #
-    #     full_data = Data(src_node_ids=all_data[:, 0].astype('int64'), dst_node_ids=all_data[:, 1].astype('int64'),
-    #                      node_interact_times=all_data[:, 2].astype('int64'),
-    #                      edge_ids=all_data[:, 4].astype('int64'), labels=all_data[:, 3].astype('float'),
-    #                      slow_features=full_slow_feature.astype('int64'))
-    #     train_data = Data(src_node_ids=train_data[:, 0].astype('int64'), dst_node_ids=train_data[:, 1].astype('int64'),
-    #                       node_interact_times=train_data[:, 2].astype('int64'),
-    #                       edge_ids=train_data[:, 4].astype('int64'), labels=train_data[:, 3].astype('float'),
-    #                       slow_features=train_slow_feature.astype('int64'))
-    #     val_data = Data(src_node_ids=val_data[:, 0].astype('int64'), dst_node_ids=val_data[:, 1].astype('int64'),
-    #                     node_interact_times=val_data[:, 2].astype('int64'),
-    #                     edge_ids=val_data[:, 4].astype('int64'), labels=val_data[:, 3].astype('float'),
-    #                     slow_features=val_slow_feature.astype('int64'))
-    #     test_data = Data(src_node_ids=test_data[:, 0].astype('int64'), dst_node_ids=test_data[:, 1].astype('int64'),
-    #                      node_interact_times=test_data[:, 2].astype('int64'),
-    #                      edge_ids=test_data[:, 4].astype('int64'), labels=test_data[:, 3].astype('float'),
-    #                      slow_features=test_slow_feature.astype('int64'))
-    #     # the setting of seed follows previous works
-    #     random.seed(2025)
-    #     NODE_FEAT_DIM = EDGE_FEAT_DIM = 172
-    #     unique_node_ids_num = full_data.num_unique_nodes + 1
-    #     edge_ids_num = full_data.num_interactions + 1
-    #     node_raw_features = np.zeros((unique_node_ids_num, NODE_FEAT_DIM))
-    #     edge_raw_features = np.zeros((edge_ids_num, EDGE_FEAT_DIM))
-    #
-    #     return node_raw_features, edge_raw_features, full_data, train_data, val_data, test_data
     else:
         print('To do')
         '''
